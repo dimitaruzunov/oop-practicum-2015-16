@@ -21,7 +21,6 @@ struct Point2D {
   }
 };
 
-
 void testTranslate() {
   Point2D point;
   point.x = 3;

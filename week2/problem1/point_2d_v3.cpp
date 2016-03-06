@@ -39,7 +39,6 @@ public:
   }
 };
 
-
 void testTranslate() {
   Point2D point;
   point.setX(3);
