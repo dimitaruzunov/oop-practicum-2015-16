@@ -51,7 +51,6 @@ public:
   }
 };
 
-
 void testTranslate() {
   Point3D point;
   point.setX(3);
