@@ -22,7 +22,7 @@
 ``` cpp
 struct Destination {
 	char city[32];
-	int kilomenters;	
+	int kilometers;	
 };
 ```
 
