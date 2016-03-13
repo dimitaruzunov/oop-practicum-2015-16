@@ -97,9 +97,35 @@ public:
     bVertex.translate(translationVector);
     cVertex.translate(translationVector);
   }
+
+  void print() {
+    aVertex.print();
+    bVertex.print();
+    cVertex.print();
+  }
 };
 
+void testPerimeter() {
+  Triangle triangle(Point3D(1, 1, 1), Point3D(1, 1, 2), Point3D(1 , 2, 1));
+  cout << triangle.perimeter() << endl;
+}
+
+void testArea() {
+  Triangle triangle(Point3D(1, 1, 1), Point3D(1, 1, 2), Point3D(1 , 2, 1));
+  cout << triangle.area() << endl;
+}
+
+void testTranslate() {
+  Triangle triangle(Point3D(1, 1, 1), Point3D(1, 1, 2), Point3D(1 , 2, 1));
+
+  triangle.translate(Point3D(2, 1, 10));
+  triangle.print();
+}
+
 int main() {
+  testPerimeter();
+  testArea();
+  testTranslate();
 
   return 0;
 }
