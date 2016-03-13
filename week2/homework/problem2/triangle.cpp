@@ -10,6 +10,12 @@ class Point3D {
 
 public:
 
+  Point3D(double x = 0, double y = 0, double z = 0) {
+    setX(x);
+    setY(y);
+    setZ(z);
+  }
+
   double getX() {
     return x;
   }
@@ -57,6 +63,12 @@ class Triangle {
   Point3D cVertex;
 
 public:
+
+  Triangle(Point3D _aVertex, Point3D _bVertex, Point3D _cVertex) {
+    aVertex = _aVertex;
+    bVertex = _bVertex;
+    cVertex = _cVertex;
+  }
 
   double getASide() {
     return bVertex.distanceTo(cVertex);
