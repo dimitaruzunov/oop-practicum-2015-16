@@ -60,9 +60,7 @@ public:
 void testTranslate() {
   Point3D point(3, 5, 2);
 
-  Point3D translationVector(4, 7, 1);
-
-  point.translate(translationVector);
+  point.translate(Point3D(4, 7, 1));
   point.print();
 }
 
