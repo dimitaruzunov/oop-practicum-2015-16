@@ -10,6 +10,12 @@ class Point3D {
 
 public:
 
+  Point3D(double x, double y, double z) {
+    setX(x);
+    setY(y);
+    setZ(z);
+  }
+
   double getX() {
     return x;
   }
@@ -52,30 +58,17 @@ public:
 };
 
 void testTranslate() {
-  Point3D point;
-  point.setX(3);
-  point.setY(5);
-  point.setZ(2);
+  Point3D point(3, 5, 2);
 
-  Point3D translationVector;
-  translationVector.setX(4);
-  translationVector.setY(7);
-  translationVector.setZ(1);
+  Point3D translationVector(4, 7, 1);
 
   point.translate(translationVector);
   point.print();
 }
 
 void testDistanceBetween() {
-  Point3D firstPoint;
-  firstPoint.setX(3);
-  firstPoint.setY(5);
-  firstPoint.setZ(2);
-
-  Point3D secondPoint;
-  secondPoint.setX(4);
-  secondPoint.setY(1);
-  secondPoint.setZ(7);
+  Point3D firstPoint(3, 5, 2);
+  Point3D secondPoint(4, 1, 7);
 
   cout << firstPoint.distanceTo(secondPoint) << '\n';
 }
