@@ -35,9 +35,7 @@ struct Client {
   };
 };
 
-void inputClients(int n) {
-  Client clients[MAX];
-
+void inputClients(Client clients[], int n) {
   for (int i = 0; i < n; ++i) {
     clients[i].input();
   }
@@ -60,5 +58,12 @@ double sumAccounts(Client clients[], int n) {
 }
 
 int main() {
+  Client clients[MAX];
+  int clientsCount = 3;
+
+  inputClients(clients, clientsCount);
+  printClients(clients, clientsCount);
+  cout << sumAccounts(clients, clientsCount) << '\n';
+
   return 0;
 }
