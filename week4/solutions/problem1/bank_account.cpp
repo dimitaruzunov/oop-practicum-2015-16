@@ -26,7 +26,9 @@ public:
   }
 
   void draw(double amount) {
-    account -= amount;
+    if (account >= amount) {
+      account -= amount;
+    }
   }
 };
 
