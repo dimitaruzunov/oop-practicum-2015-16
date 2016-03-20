@@ -2,11 +2,9 @@
 
 using namespace std;
 
-const int MAX = 100;
-
 struct Person {
-  string firstName;
-  string lastName;
+  char firstName[32];
+  char lastName[32];
 
   void input() {
     cout << "Enter person's first and last names separated by a space: ";
@@ -58,7 +56,7 @@ double sumAccounts(Client clients[], int n) {
 }
 
 int main() {
-  Client clients[MAX];
+  Client clients[100];
   int clientsCount = 3;
 
   inputClients(clients, clientsCount);
