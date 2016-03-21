@@ -65,9 +65,7 @@ public:
         }
         char word[100] = {'\0'};
         strcpy(word, lastWhiteSpace);
-        cout << findWord(word).translation;
-
-        cout << endl;
+        cout << findWord(word).translation << endl;
     }
 };
 
@@ -83,7 +81,6 @@ int main() {
     dictionary.removeWord("zadacha");
 
     dictionary.translate("tazi zadacha e trudna");
-
 
     return 0;
 }
