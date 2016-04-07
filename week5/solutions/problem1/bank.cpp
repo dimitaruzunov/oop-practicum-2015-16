@@ -17,21 +17,6 @@ public:
     strcpy(id, _id);
   }
 
-  BankAccount(const BankAccount& other): account(other.account) {
-    strcpy(clientName, other.clientName);
-    strcpy(id, other.id);
-  }
-
-  BankAccount& operator=(const BankAccount& other) {
-    if (this != &other) {
-      strcpy(clientName, other.clientName);
-      strcpy(id, other.id);
-      account = other.account;
-    }
-
-    return *this;
-  }
-
   const char* getId() {
     return id;
   }
