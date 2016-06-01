@@ -15,11 +15,39 @@ class Dog : public Animal {
   char* name;
   int age;
 
+  void copy(const Dog& other) {
+    name = new char[strlen(other.name) + 1];
+    strcpy(name, other.name);
+
+    age = other.age;
+  }
+
+  void erase() {
+    delete[] name;
+  }
+
 public:
 
-  Dog(const char* _name, int _age): age(_age) {
+  Dog(const char* _name = "Dog", int _age = 0): age(_age) {
     name = new char[strlen(_name) + 1];
     strcpy(name, _name);
+  }
+
+  Dog(const Dog& other) {
+    copy(other);
+  }
+
+  Dog& operator=(const Dog& other) {
+    if (this != &other) {
+      erase();
+      copy(other);
+    }
+
+    return *this;
+  }
+
+  ~Dog() {
+    erase();
   }
 
   void sayHello() const {
@@ -35,11 +63,39 @@ class Bird : public Animal {
   char* name;
   int age;
 
+  void copy(const Bird& other) {
+    name = new char[strlen(other.name) + 1];
+    strcpy(name, other.name);
+
+    age = other.age;
+  }
+
+  void erase() {
+    delete[] name;
+  }
+
 public:
 
-  Bird(const char* _name, int _age): age(_age) {
+  Bird(const char* _name = "Bird", int _age = 0): age(_age) {
     name = new char[strlen(_name) + 1];
     strcpy(name, _name);
+  }
+
+  Bird(const Bird& other) {
+    copy(other);
+  }
+
+  Bird& operator=(const Bird& other) {
+    if (this != &other) {
+      erase();
+      copy(other);
+    }
+
+    return *this;
+  }
+
+  ~Bird() {
+    delete[] name;
   }
 
   void sayHello() const {
