@@ -6,6 +6,8 @@ public:
     virtual int sum() const = 0;
     virtual int product() const = 0;
     virtual void print() const = 0;
+
+    virtual ~Sequence() {}
 };
 
 class Range : public Sequence {

@@ -8,7 +8,7 @@ public:
   virtual void sayHello() const = 0;
   virtual void sayAge() const = 0;
 
-  virtual ~Animal() {};
+  virtual ~Animal() {}
 };
 
 class Dog : public Animal {

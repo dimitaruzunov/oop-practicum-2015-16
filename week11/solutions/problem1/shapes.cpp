@@ -10,6 +10,8 @@ public:
   virtual double perimeter() const = 0;
   virtual double area() const = 0;
   virtual void print() const = 0;
+
+  virtual ~Shape() {}
 };
 
 class Rectangle: public Shape {
