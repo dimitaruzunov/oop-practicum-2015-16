@@ -17,7 +17,7 @@ class Fruit : public Product {
   double pricePerKilo;
 
   void copy(const Fruit& other) {
-    kind = new char[strlen(other.kind)];
+    kind = new char[strlen(other.kind) + 1];
     strcpy(kind, other.kind);
 
     weightInGrams = other.weightInGrams;
@@ -32,7 +32,7 @@ public:
 
   Fruit(const char* _kind = "", int _weightInGrams = 0, double _pricePerKilo = 0)
     : weightInGrams(_weightInGrams), pricePerKilo(_pricePerKilo) {
-    kind = new char[strlen(_kind)];
+    kind = new char[strlen(_kind) + 1];
     strcpy(kind, _kind);
   }
 
@@ -72,10 +72,10 @@ class Beer : public Product {
   double price;
 
   void copy(const Beer& other) {
-    brand = new char[strlen(other.brand)];
+    brand = new char[strlen(other.brand) + 1];
     strcpy(brand, other.brand);
 
-    bottleType = new char[strlen(other.bottleType)];
+    bottleType = new char[strlen(other.bottleType) + 1];
     strcpy(bottleType, other.bottleType);
 
     price = other.price;
@@ -90,10 +90,10 @@ public:
 
   Beer(const char* _brand = "", const char* _bottleType = "", double _price = 0)
     : price(_price) {
-    brand = new char[strlen(_brand)];
+    brand = new char[strlen(_brand) + 1];
     strcpy(brand, _brand);
 
-    bottleType = new char[strlen(_bottleType)];
+    bottleType = new char[strlen(_bottleType) + 1];
     strcpy(bottleType, _bottleType);
   }
 
