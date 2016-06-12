@@ -24,6 +24,8 @@ public:
     }
 
     virtual void attack(Hero* enemy) = 0;
+
+    virtual ~Hero() { }
 };
 
 class Magician : public Hero {
