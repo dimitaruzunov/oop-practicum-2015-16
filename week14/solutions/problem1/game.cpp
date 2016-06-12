@@ -19,7 +19,7 @@ public:
         return health;
     }
 
-    int setHealth(int _health) {
+    void setHealth(int _health) {
         health = _health;
     }
 
