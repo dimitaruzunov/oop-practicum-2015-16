@@ -146,10 +146,7 @@ int main() {
 
   for (int i = 0; i < 5; ++i) {
     products[i] = &fruits[i];
-  }
-
-  for (int i = 5; i < 10; ++i) {
-    products[i] = &beers[i - 5];
+    products[i + 5] = &beers[i];
   }
 
   for (int i = 0; i < 10; ++i) {
