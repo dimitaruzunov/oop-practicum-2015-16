@@ -30,7 +30,7 @@ class Fruit : public Product {
 
 public:
 
-  Fruit(const char* _kind, int _weightInGrams, double _pricePerKilo)
+  Fruit(const char* _kind = "", int _weightInGrams = 0, double _pricePerKilo = 0)
     : weightInGrams(_weightInGrams), pricePerKilo(_pricePerKilo) {
     kind = new char[strlen(_kind)];
     strcpy(kind, _kind);
@@ -88,7 +88,7 @@ class Beer : public Product {
 
 public:
 
-  Beer(const char* _brand, const char* _bottleType, double _price)
+  Beer(const char* _brand = "", const char* _bottleType = "", double _price = 0)
     : price(_price) {
     brand = new char[strlen(_brand)];
     strcpy(brand, _brand);
