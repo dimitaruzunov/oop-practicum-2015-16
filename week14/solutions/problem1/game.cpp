@@ -5,7 +5,7 @@ using std::cout;
 using std::endl;
 
 class Hero {
-public:
+protected:
 
     char name[30];
     int health;
@@ -17,6 +17,10 @@ public:
 
     int getHealth() {
         return health;
+    }
+
+    int setHealth(int _health) {
+        health = _health;
     }
 
     virtual void greet() {
@@ -46,7 +50,7 @@ public:
     }
 
     void attack(Hero* enemy) {
-        enemy->health -= mana;
+        enemy->setHealth(enemy->getHealth() - mana);
         mana -= 20;
     }
 };
@@ -69,7 +73,7 @@ public:
     }
 
     void attack(Hero* enemy) {
-        enemy->health -= (rage + 10);
+        enemy->setHealth(enemy->getHealth() - (rage + 10));
         rage += 20;
     }
 };
